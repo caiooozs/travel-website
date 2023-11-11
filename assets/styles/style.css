@@ -1,0 +1,159 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+
+:root{
+    font-size: 62.5%;
+}
+
+.bg-start {
+    background: url('/assets/img/pexels-ray-bilcliff-3954339.jpg'), lightgray;
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    height: 900px;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: center;
+    gap: 55px;
+}
+
+.header-links {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 2.0rem;
+    margin-top: 10px;
+}
+
+.principal-title {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5.0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.cards-section {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+}
+
+
+.card {
+    box-shadow: 10px 10px 40px;
+    border-radius: 20px;
+    transition: all 0.6s cubic-bezier(0.16S, 0.84, 0.44, 1);
+
+}
+
+.texto-titulo {
+    font-size: 5.2rem;
+    text-align: center;
+
+}
+
+.texto-subtitulo {
+    font-size: 2.2rem;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.texto-body {
+    font-size: 1.3rem;
+    text-align: center;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 25px;
+}
+
+.cards-title {
+    font-size: 5rem;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.about-us-title {
+    text-align: center;
+    margin-top: 50px;
+
+}
+
+.about-us-paragraph {
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.footer-paragraph {
+    text-align: center;
+    font-size: 1.0rem;
+    margin-top: 40px;
+}
+
+
+
+
+
+
+
+
+
+/* ANIMAÇÕES */
+.principal-title::after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.2s ease 0s, left 0.2s ease 0s;
+    width: 0;
+}
+
+.principal-title:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+
+.header-links:hover {
+    background-color: white;
+    transition: 0.2s;
+    border-radius: 8px;
+    color: black;
+
+}
+
+.card:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    box-shadow: 15px 15px 60px;
+    transition: all 0.6s cubic-bezier(0.16S, 0.84, 0.44, 1);
+    z-index: -1;
+    border-radius: 6px;
+}
+
+.card:hover {
+    transform: scale(1.25, 1.25);
+    transition: 0.6s;
+}
+
+.card:hover::after {
+    opacity: 1;
+}
